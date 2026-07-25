@@ -3231,3 +3231,13 @@ pre .emphasis {
   height: 2px;
   background: var(--red-1);
 }
+.main-nav-icon {
+  transform: scale(1.5);
+  transform-origin: center;
+  display: inline-block;
+}
+.sidebar-menu-icon {
+  transform: scale(1.3);
+  transform-origin: center;
+  display: inline-block;
+}
