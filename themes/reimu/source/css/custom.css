@@ -1,15 +1,13 @@
-
-
-/* 顶部导航栏图标放大 */
-.main-nav-icon {
-  transform: scale(1.4);          /* 1.4 倍，你可以调整这个数值 */
-  transform-origin: center;       /* 以中心为原点缩放，避免偏移 */
-  display: inline-block;          /* 防止缩放影响布局 */
+/* 顶部导航栏图标 - 直接作用于图标元素本身 */
+#header .main-nav-icon i {
+  display: inline-block;
+  transform: scale(1.5) !important;
+  transform-origin: center !important;
 }
 
-/* 侧边栏图标放大（如果侧边栏也显示图标） */
-.sidebar-menu-icon {
-  transform: scale(1.3);
-  transform-origin: center;
+/* 侧边栏图标 - 直接作用于图标元素本身 */
+.sidebar-menu-icon i {
   display: inline-block;
+  transform: scale(1.3) !important;
+  transform-origin: center !important;
 }
