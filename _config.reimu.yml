@@ -15,7 +15,7 @@ menu:
     icon: iconfont icon-archive
   - name: about
     url: /about
-    icon: iconfont icon-user-o
+    icon: iconfont icon-user-circle-o
   - name: friend
     url: /friend
     icon: iconfont icon-sitemap
@@ -940,5 +940,5 @@ vendor:
 
 jquery: https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js
 
-# custom_css:
-#  - /css/custom.css
+ custom_css:
+  - /css/custom.css
