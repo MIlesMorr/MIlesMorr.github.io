@@ -12,13 +12,13 @@ menu:
 # default use taichi icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1'
   - name: archives
     url: /archives
-    icon: e621
+    icon: iconfont icon-home
   - name: about
     url: /about
-    icon: 
+    icon: icon-user-o
   - name: friend
     url: /friend
-    icon: 
+    icon: icon-sitemap
 
 subtitle:
   typing:
