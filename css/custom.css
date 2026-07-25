@@ -1,9 +1,9 @@
 /* 调整顶部导航栏的菜单图标大小 */
 #header .main-nav-icon i {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 /* 调整侧边栏的菜单图标大小 */
 .sidebar-menu-icon i {
-  font-size: 20px;
+  font-size: 24px;
 }
