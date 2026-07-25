@@ -8,7 +8,7 @@ theme_config_check: true
 menu:
   - name: home
     url: /
-    icon: e768
+    icon: iconfont icon-home
 # default use taichi icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1'
   - name: archives
     url: /archives
@@ -205,7 +205,7 @@ reimu_cursor:
     text: ../images/cursor/reimu-cursor-text.png
 
 # set to false to enable fontawesome
-icon_font: 4552607_ex15nbittbh
+#icon_font: 4552607_ex15nbittbh
 
 # Font loading strategy
 # Custom Font -> Google Fonts -> Local FallBack Font
