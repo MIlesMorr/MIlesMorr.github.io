@@ -8,7 +8,7 @@
   
   
   
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)","zh-TW":"複製成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["en","zh-TW"];</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["zh-TW","en"];</script>
   <title>
     <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" -->
     <link rel="stylesheet" href="/libs/iconfont/iconfont.css">
@@ -137,8 +137,8 @@
         </div>
         <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
             <li data-value="zh-CN" role="option" aria-selected="false">简体中文</li>
-            <li data-value="en" role="option" class="selected" aria-selected="true">English</li>
             <li data-value="zh-TW" role="option" aria-selected="false">正體中文</li>
+            <li data-value="en" role="option" class="selected" aria-selected="true">English</li>
         </ul>
       </div>
       <script>
@@ -157,8 +157,8 @@
           item.addEventListener("click", () => {
             const langMap = {};
               langMap['zh-CN'] = '/archives/2026/07/';
-              langMap['en'] = '/en/archives/2026/07/';
               langMap['zh-TW'] = '/zh-TW/archives/2026/07/';
+              langMap['en'] = '/en/archives/2026/07/';
             selectedLang.textContent = item.textContent;
             selectItems.classList.remove("show");
             selectOptions.forEach((option) => {
@@ -264,10 +264,10 @@
       <a class="archives-tag-list-link" href="/en/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
     </div>
     <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/en/tags/%E6%97%A5%E5%B8%B8/">日常</a>
+      <a class="archives-tag-list-link" href="/en/tags/%E6%95%B0%E5%AD%A6%E5%A5%B3%E5%AD%A9/">数学女孩</a>
     </div>
     <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/en/tags/%E6%95%B0%E5%AD%A6%E5%A5%B3%E5%AD%A9/">数学女孩</a>
+      <a class="archives-tag-list-link" href="/en/tags/%E6%97%A5%E5%B8%B8/">日常</a>
     </div>
 </div>
 <div class="category-wrap">
@@ -275,10 +275,10 @@
       <a class="archives-category-list-link" href="/en/categories/%E4%B8%AA%E4%BA%BA/">个人</a>
     </div>
     <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/en/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+      <a class="archives-category-list-link" href="/en/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
     </div>
     <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/en/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
+      <a class="archives-category-list-link" href="/en/categories/%E7%94%9F%E6%B4%BB/">生活</a>
     </div>
 </div>
         <section class="archives-wrap" data-aos="fade-up">
