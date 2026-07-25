@@ -1,0 +1,61 @@
+{
+  "_from": "hexo-theme-reimu",
+  "_id": "hexo-theme-reimu@1.12.5",
+  "_inBundle": false,
+  "_integrity": "sha512-cQBb0EyQ/R3cTV6b4ZMtkbToqQaWhzgvj4OGzxtd3ZTdw7QGqkmo6DU07jUt5WljSrR8dDD4SRgZ0c5ndxCtYw==",
+  "_location": "/hexo-theme-reimu",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "hexo-theme-reimu",
+    "name": "hexo-theme-reimu",
+    "escapedName": "hexo-theme-reimu",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/hexo-theme-reimu/-/hexo-theme-reimu-1.12.5.tgz",
+  "_shasum": "279c3c73ac9a5df264c0435230b704b0e7a8654c",
+  "_spec": "hexo-theme-reimu",
+  "_where": "D:\\myblog",
+  "author": {
+    "name": "D-Sketon"
+  },
+  "bugs": {
+    "url": "https://github.com/D-Sketon/hexo-theme-reimu/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A Hakurei Reimu style Hexo theme",
+  "files": [
+    "_config.yml",
+    "LICENSE",
+    "README.en.md",
+    "README.md",
+    "_example",
+    "languages",
+    "layout",
+    "scripts",
+    "source"
+  ],
+  "homepage": "https://github.com/D-Sketon/hexo-theme-reimu#readme",
+  "keywords": [
+    "hexo",
+    "theme",
+    "blog",
+    "reimu",
+    "touhou"
+  ],
+  "license": "MIT",
+  "name": "hexo-theme-reimu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-Sketon/hexo-theme-reimu.git"
+  },
+  "version": "1.12.5"
+}
