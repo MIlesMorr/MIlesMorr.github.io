@@ -8,36 +8,37 @@ theme_config_check: true
 menu:
   - name: home
     url: /
-    icon: # default use taichi icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1'
+    icon: iconfont icon-home
+# default use taichi icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1'
   - name: archives
     url: /archives
-    icon:
+    icon: e621
   - name: about
     url: /about
-    icon:
+    icon: 
   - name: friend
     url: /friend
-    icon:
+    icon: 
 
 subtitle:
   typing:
-    enable: false
+    enable: true
     strings:
-      # - Sentence 1
-      # - Sentence 2
-      # - Sentence 3
-      # - Sentence 4
+      - "我是子标题"
+      - "我也是子标题"
+      - "我和他们一样"
+      - "我们都是子标题"
     typeSpeed: 100              # typing speed (milliseconds/character)
     backSpeed: 50               # backspacing speed (milliseconds/character)
     backDelay: 2000             # time before backspacing (milliseconds)
     startDelay: 300             # time before typing starts (milliseconds)
     loop: true                  # loop through the strings
-    shuffle: true               # randomize the order of strings
+    shuffle: false               # randomize the order of strings
     showCursor: true            # show the typing cursor
-    cursorChar: "|"             # character for cursor
+    cursorChar: "_"             # character for cursor
     smartBackspace: false       # only backspace what doesn't match the previous string
 
-banner: "/images/banner.webp" # which means themes/reimu/source/images/banner.webp
+banner: "/image/blue eye.webp" # which means themes/reimu/source/images/banner.webp
 # You can also write it in the form of the following url
 # banner: "https://example.com"
 
@@ -90,7 +91,7 @@ excerpt_link: Read More
 
 # RSS
 # need https://github.com/hexojs/hexo-generator-feed
-rss: atom.xml
+rss: 
 
 # Footer copyright
 copyright: # Inject code snippet right in the footer copyright
@@ -177,10 +178,10 @@ summary:
 
 # Internationalization
 i18n:
-  enable: false
+  enable: true
   type: [page, post]
   generator: [archive, category, tag, index]
-  languages: [zh-CN, en]
+  languages: [zh-CN,zh-TW, en]
 
 ########################################
 # CSS
@@ -254,13 +255,13 @@ dark_mode:
 
 # need https://github.com/D-Sketon/hexo-renderer-markdown-it-plus
 math:
-  enable: false
+  enable: true
   # If you don't want to use it, please set `autoRender` to true to enable browser rendering
   katex:
     enable: true
     autoRender: false # whether to render the math in the browser, disabled by default
   mathjax:
-    enable: false
+    enable: true
     options: # see https://docs.mathjax.org/en/latest/web/configuration.html
       {
         tex:
@@ -421,19 +422,18 @@ gitalk:
 
 # https://giscus.app/zh-CN
 giscus:
-  enable: false
-  repo:
-  repoId:
-  category:
-  categoryId:
-  mapping: mapping
+  enable: true
+  repo: MIlesMorr/blog-comments
+  repoId: R_kgDOTVcwFw
+  category: General
+  categoryId: DIC_kwDOTVcwF84DA-k4
+  mapping: pathname
   strict: 0
   reactionsEnabled: 1
   emitMetadata: 0
   inputPosition: bottom
-  theme:
-    light:
-    dark:
+  theme: light
+  dark: dark
 
 # https://utteranc.es
 utterances:
@@ -501,7 +501,7 @@ generator_search:
 preloader:
   enable: true
   text:
-    zh-CN: 少女祈祷中...
+    zh-CN: 哎呀呀...
     zh-TW: 少女祈禱中...
     en: Loading...
     ja: 少女祈祷中...
@@ -643,8 +643,8 @@ share:
   # - linkedin
   # - reddit
   # - weibo
-  # - qq
-  # - weixin
+  - qq
+  - weixin
 
 ########################################
 # Experimental features
@@ -681,6 +681,7 @@ pace:
 # Experimental
 service_worker:
   enable: false
+
 
 # Experimental
 live2d:
@@ -744,23 +745,23 @@ material_theme:
 
 internal_theme:
   light:
-    --red-0: "#ff0000"
-    --red-1: "#ff5252"
-    --red-2: "#ff7c7c"
-    --red-3: "#ffafaf"
-    --red-4: "#ffd0d0"
-    --red-5: "#ffecec"
-    --red-5-5: "#fff3f3"
-    --red-6: "#fff7f7"
-    --color-red-6-shadow: "rgba(255, 78, 78, 0.6)"
-    --color-red-3-shadow: "rgba(255, 78, 78, 0.3)"
+    --red-0: "#2B7AEA"          # 主色 - 更鲜艳的蓝
+    --red-1: "#4A9AF5"          # 辅助蓝
+    --red-2: "#6DB0F7"          # 浅蓝
+    --red-3: "#9AC8F9"          # 更浅蓝
+    --red-4: "#C2DDFB"          # 极浅蓝
+    --red-5: "#E5F0FD"          # 背景浅蓝
+    --red-5-5: "#F2F8FE"        # 更淡背景
+    --red-6: "#F9FBFE"          # 最淡背景
+    --color-red-6-shadow: "rgba(43, 122, 234, 0.6)"   # 阴影（更浓郁）
+    --color-red-3-shadow: "rgba(43, 122, 234, 0.3)"   # 阴影
 
-    --highlight-nav: "#f5f5f5"
-    --highlight-scrollbar: "#d6d6d6"
+    --highlight-nav: "#f5f7fa"
+    --highlight-scrollbar: "#d6dce6"
     --highlight-background: "#fdfdfd"
-    --highlight-selection: "#e9e9e988"
+    --highlight-selection: "#e9e9ee88"
     --highlight-foreground: "#24292e"
-    --highlight-comment: "#7d7d7d"
+    --highlight-comment: "#7d8a9e"
     --highlight-red: "#d73a49"
     --highlight-orange: "#e36209"
     --highlight-yellow: "#cb911d"
@@ -772,11 +773,12 @@ internal_theme:
     --highlight-deletion-bg: "#ffeef0"
     --highlight-addition: "#22863a"
     --highlight-addition-bg: "#f0fff4"
+
   dark:
-    --red-4: "rgba(255, 208, 208, 0.5)"
-    --red-5: "rgba(255,228,228,0.15)"
-    --red-5-5: "rgba(255,236,236,0.05)"
-    --red-6: "rgba(255, 243, 243, 0.2)"
+    --red-4: "rgba(43, 122, 234, 0.5)"    # 蓝色透明（加深）
+    --red-5: "rgba(43, 122, 234, 0.15)"   # 蓝色透明
+    --red-5-5: "rgba(43, 122, 234, 0.05)" # 蓝色透明
+    --red-6: "rgba(43, 122, 234, 0.2)"    # 蓝色透明
 
     --highlight-nav: "#222830"
     --highlight-scrollbar: "#454d59"
@@ -935,3 +937,8 @@ vendor:
     aplayer:
       src: webcache|aplayer@1.10.1/dist/APlayer.min.css
       integrity: sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU/voDBY5XE2lVh
+
+jquery: https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js
+
+# custom_css:
+#  - /css/custom.css
