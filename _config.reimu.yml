@@ -41,7 +41,7 @@ subtitle:
     cursorChar: "_"             # character for cursor
     smartBackspace: false       # only backspace what doesn't match the previous string
 
-banner: "/image/blue eye.webp" # which means themes/reimu/source/images/banner.webp
+banner: "/image/yy2.webp" # which means themes/reimu/source/images/banner.webp
 # You can also write it in the form of the following url
 # banner: "https://example.com"
 
