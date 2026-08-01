@@ -19,6 +19,9 @@ menu:
   - name: friend
     url: /friend
     icon: iconfont icon-sitemap
+  - name: resources
+    url: /resources
+    icon: iconfont icon-file
 
 subtitle:
   typing:
