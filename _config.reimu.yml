@@ -19,7 +19,7 @@ menu:
   - name: friend
     url: /friend
     icon: iconfont icon-sitemap
-  - name: resources
+  - name: 资料
     url: /resources
     icon: iconfont icon-file
 
