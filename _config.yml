@@ -116,29 +116,27 @@ OhMyLive2d:
     mobileDisplay: false
     models:
       - path: /live2d_models/yang/yang.model3.json
-        scale: 0.08
-        position: [-80, 40]
+        scale: 0.15
+        position: [-80, 50]
         stageStyle:
-          width: 300
-          height: 400
+          width: 280
+          height: 350
     menus:
       items: |
         (defaultItems) => {
+          // 过滤掉不需要的默认按钮（例如删除 'rest'）
+          const filtered = defaultItems.filter(item => item.id !== 'rest');
           return [
-            ...defaultItems,  # 保留默认的“休息”等按钮
+            ...filtered,
             {
               id: 'SwitchExpression',
-              icon: 'emoji-joy',  # 你可以更换喜欢的图标
+              icon: 'emoji-joy',
               title: '切换表情',
               onClick: (oml2d) => {
-                // 定义你的表情列表，名称需与 .exp3.json 文件名一致
                 const expressions = ['悲', '脸黑', '眼泪', '反绑x'];
-                // 获取当前表情，并计算下一个
                 const current = oml2d.models.model._expressionName;
                 let nextIndex = (expressions.indexOf(current) + 1) % expressions.length;
-                // 应用下一个表情
                 oml2d.models.model.expression(expressions[nextIndex]);
-                // 可选：显示一个提示消息
                 oml2d.tipsMessage('表情: ' + expressions[nextIndex], 2000);
               }
             }
