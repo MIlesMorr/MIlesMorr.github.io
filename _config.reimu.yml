@@ -659,31 +659,27 @@ injector:
   head_end: # Inject code snippet right before </head>
   body_begin: # Inject code snippet right after <body>
   body_end:
-    - <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.2/pixi.min.js"></script>
-    - <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/pixi-live2d-display.min.js"></script>
-    - <script>
+    - |
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.2/pixi.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/pixi-live2d-display.min.js"></script>
+      <script>
         (function() {
-          // 等待 DOM 完全加载
           if (document.readyState === 'complete' || document.readyState === 'interactive') {
             initLive2d();
           } else {
             document.addEventListener('DOMContentLoaded', initLive2d);
           }
-
           function initLive2d() {
-            // 创建画布
             const canvas = document.createElement('canvas');
             canvas.id = 'live2d-canvas';
             canvas.style.position = 'fixed';
             canvas.style.bottom = '0';
-            canvas.style.right = '0';   // 改成 'left' 可放到左边
+            canvas.style.right = '0';
             canvas.style.width = '300px';
             canvas.style.height = '600px';
             canvas.style.zIndex = '9999';
-            canvas.style.pointerEvents = 'none'; // 不遮挡点击
+            canvas.style.pointerEvents = 'none';
             document.body.appendChild(canvas);
-
-            // 初始化 Pixi 应用
             const app = new PIXI.Application({
               view: canvas,
               width: 300,
@@ -691,20 +687,15 @@ injector:
               backgroundAlpha: 0,
               transparent: true
             });
-
-            // 加载秧秧模型（路径相对于站点根目录）
             PIXI.live2d.Live2DModel.from('/live2d/yangyang/秧秧.model3.json')
               .then(model => {
                 app.stage.addChild(model);
-                // 调整大小和位置
-                model.anchor.set(0.5, 1);   // 底部锚点
-                model.scale.set(0.18);       // 缩放（可调）
-                model.x = 150;               // 水平居中
-                model.y = 600;               // 底部对齐
+                model.anchor.set(0.5, 1);
+                model.scale.set(0.18);
+                model.x = 150;
+                model.y = 600;
               })
-              .catch(err => {
-                console.error('秧秧加载失败，请检查路径:', err);
-              });
+              .catch(err => console.error('秧秧加载失败:', err));
           }
         })();
       </script> # Inject code snippet right before </body>
