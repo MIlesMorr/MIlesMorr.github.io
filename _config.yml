@@ -113,7 +113,7 @@ OhMyLive2d:
   CDN: https://unpkg.com/oh-my-live2d
   option:
     dockedPosition: 'left'
-    mobileDisplay: false
+    mobileDisplay: true
     models:
       - path: /live2d_models/yang/yang.model3.json
         scale: 0.08
