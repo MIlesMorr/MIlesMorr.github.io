@@ -112,12 +112,12 @@ OhMyLive2d:
   enable: true
   CDN: https://unpkg.com/oh-my-live2d
   option:
-    dockedPosition: 'right'
+    dockedPosition: 'left'
     mobileDisplay: false
     models:
       - path: /live2d_models/yang/yang.model3.json
         scale: 0.08
-        position: [-30, 0]
+        position: [-80, 40]
         stageStyle:
           width: 300
           height: 400
