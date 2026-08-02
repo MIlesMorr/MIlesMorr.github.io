@@ -4,7 +4,7 @@
     "ModelID": "92989db3ca944bb5956338137308a626",
     "FileReferences": {
         "Icon": "秧秧.png",
-        "Model": "秧秧.model3.json",
+        "Model": "yang.model3.json",
         "IdleAnimation": "Scene1.motion3.json",
         "IdleAnimationWhenTrackingLost": ""
     },
