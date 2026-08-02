@@ -37,8 +37,8 @@
 <meta property="og:description" content="调试">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/banner.webp">
-<meta property="article:published_time" content="2026-08-02T09:57:50.303Z">
-<meta property="article:modified_time" content="2026-08-02T09:57:50.303Z">
+<meta property="article:published_time" content="2026-08-02T10:01:10.306Z">
+<meta property="article:modified_time" content="2026-08-02T10:01:10.306Z">
 <meta property="article:author" content="MilesMorr">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/banner.webp">
@@ -282,7 +282,7 @@
     <div class="article-meta">
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2026-08-02T09:57:50.303Z" itemprop="datePublished">2026-08-02</time>
+    <time datetime="2026-08-02T10:01:10.306Z" itemprop="datePublished">2026-08-02</time>
     <time style="display: none;" id="post-update-time">2026-08-02</time>
   </span>
 </div>
@@ -519,8 +519,8 @@
           excerpt: "",
           description: "",
           stripContent: "调试 ",
-          date: "Sun Aug 02 2026 09:57:50 GMT+0000",
-          updated: "Sun Aug 02 2026 09:57:50 GMT+0000",
+          date: "Sun Aug 02 2026 10:01:10 GMT+0000",
+          updated: "Sun Aug 02 2026 10:01:10 GMT+0000",
           cover: "/image/yy2.webp",
         };
       </script>
@@ -799,5 +799,23 @@
 
 
 
-  <!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"left",mobileDisplay:false,models:[{"path":"/live2d_models/yang/yang.model3.json","scale":0.08,"position":[-80,40],"stageStyle":{"width":300,"height":400}}]});</script><!-- hexo injector body_end end --></body>
+  <!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"left",mobileDisplay:false,models:[{"path":"/live2d_models/yang/yang.model3.json","scale":0.08,"position":[-80,40],"stageStyle":{"width":300,"height":400}}],menus:{items:(defaultItems) => {
+  return [
+    ...defaultItems,
+    {
+      id: 'SwitchFace',        # 按钮唯一ID
+      title: '切换表情',        # 按钮显示文字
+      onClick: (oml2d) => {
+        # 这里定义点击后切换表情的逻辑
+        # 例如，轮换显示 '悲', '脸黑', '眼泪' 等
+        const expressions = ['悲', '脸黑', '眼泪', '反绑x'];
+        const current = oml2d.models.model._expressionName;
+        let nextIndex = (expressions.indexOf(current) + 1) % expressions.length;
+        oml2d.models.model.expression(expressions[nextIndex]);
+        oml2d.tipsMessage('表情: ' + expressions[nextIndex], 2000);
+      }
+    }
+  ];
+}
+}});</script><!-- hexo injector body_end end --></body>
   </html>
