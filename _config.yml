@@ -112,11 +112,11 @@ live2d:
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/
-  pluginModelPath: /
+  pluginModelPath: live2d/
   model:
-    use: live2d/yang/yang.model3.json   # 指向 source/live2d/yang 文件夹
+    use: yang/model.json
   display:
-    position: left
+    position: right
     width: 150
     height: 300
   mobile:
