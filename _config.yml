@@ -107,3 +107,20 @@ deploy:
   type: ''
   
 
+# Live2D 配置
+# live2d:
+#  scriptFrom: local # 脚本来源，保持 local 即可
+#  pluginRootPath: live2dw/ 
+#  pluginJsPath: lib/
+#  pluginModelPath: assets/
+#  tagMode: false
+#  debug: false
+#  model:
+#    use: # 这里先留空，下一步会填上模型路径
+#  display:
+#    position: right # 显示位置：left 或 right
+#    width: 150 # 宽度
+#    height: 300 # 高度
+#  mobile:
+#    show: true # 是否在移动端显示 #
+
