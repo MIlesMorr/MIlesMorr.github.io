@@ -118,7 +118,8 @@ live2d:
   tagMode: false
   log: false
   model:
-    use: yang  # 这里填你安装的模型包名
+    use: https://milesmorr.github.io/live2d_models/yang/yang.model3.json
+  # 这里填你安装的模型包名
   display:
     position: right  # 位置：left 或 right
     width: 150       # 宽度
