@@ -655,13 +655,13 @@ share:
 
 # a very simple alternative for https://hexo.io/api/injector
 injector:
-  head_begin: # Inject code snippet right after <head>
-  head_end: # Inject code snippet right before </head>
-  body_begin: # Inject code snippet right after <body>
+  head_begin:
+  head_end:
+  body_begin:
   body_end:
     - |
       <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.2/pixi.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/pixi-live2d-display.min.js"></script>
+      <script src="https://unpkg.com/pixi-live2d-display@0.4.0/dist/pixi-live2d-display.min.js"></script>
       <script>
         (function() {
           if (document.readyState === 'complete' || document.readyState === 'interactive') {
@@ -698,9 +698,9 @@ injector:
               .catch(err => console.error('秧秧加载失败:', err));
           }
         })();
-      </script> # Inject code snippet right before </body>
-  sidebar_begin: # Inject code snippet right after <aside>
-  sidebar_end: # Inject code snippet right before </aside>
+      </script>
+  sidebar_begin:
+  sidebar_end:
 
 pjax:
   enable: false
