@@ -256,17 +256,20 @@
 
 <!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"left",mobileDisplay:false,models:[{"path":"/live2d_models/yang/yang.model3.json","scale":0.08,"position":[-80,40],"stageStyle":{"width":300,"height":400}}],menus:{items:(defaultItems) => {
   return [
-    ...defaultItems,
+    ...defaultItems,  # 保留默认的“休息”等按钮
     {
-      id: 'SwitchFace',        # 按钮唯一ID
-      title: '切换表情',        # 按钮显示文字
+      id: 'SwitchExpression',
+      icon: 'emoji-joy',  # 你可以更换喜欢的图标
+      title: '切换表情',
       onClick: (oml2d) => {
-        # 这里定义点击后切换表情的逻辑
-        # 例如，轮换显示 '悲', '脸黑', '眼泪' 等
+        // 定义你的表情列表，名称需与 .exp3.json 文件名一致
         const expressions = ['悲', '脸黑', '眼泪', '反绑x'];
+        // 获取当前表情，并计算下一个
         const current = oml2d.models.model._expressionName;
         let nextIndex = (expressions.indexOf(current) + 1) % expressions.length;
+        // 应用下一个表情
         oml2d.models.model.expression(expressions[nextIndex]);
+        // 可选：显示一个提示消息
         oml2d.tipsMessage('表情: ' + expressions[nextIndex], 2000);
       }
     }
