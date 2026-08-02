@@ -107,24 +107,21 @@ deploy:
   type: ''
   
 
-# Live2D 看板娘配置
-# 文档：https://github.com/EYHN/hexo-helper-live2d
+# Live2D 看板娘配置 (hexo-oh-my-live2d)
 live2d:
   enable: true
-  scriptFrom: local
-  pluginRootPath: live2dw/
-  pluginJsPath: lib/
-  pluginModelPath: assets/
-  tagMode: false
-  log: false
   model:
+    # use: /live2d_models/yang/yang.model3.json   # 使用完整路径
+    # 或者使用完整 URL（如果已部署到 GitHub Pages）：
     use: https://milesmorr.github.io/live2d_models/yang/yang.model3.json
-  # 这里填你安装的模型包名
+    scale: 1
+    hHeadPos: 0.5
+    vHeadPos: 0.618
   display:
-    position: right  # 位置：left 或 right
-    width: 150       # 宽度
-    height: 300      # 高度
+    position: right
+    width: 200
+    height: 400
   mobile:
-    show: false      # 移动端是否显示（建议 false，避免遮挡内容）
+    show: false
   react:
-    opacity: 0.7     # 透明度
+    opacity: 0.7
