@@ -121,3 +121,23 @@ OhMyLive2d:
         stageStyle:
           width: 300
           height: 400
+    menus:
+      items: |
+        (defaultItems) => {
+          return [
+            ...defaultItems,
+            {
+              id: 'SwitchFace',        # 按钮唯一ID
+              title: '切换表情',        # 按钮显示文字
+              onClick: (oml2d) => {
+                # 这里定义点击后切换表情的逻辑
+                # 例如，轮换显示 '悲', '脸黑', '眼泪' 等
+                const expressions = ['悲', '脸黑', '眼泪', '反绑x'];
+                const current = oml2d.models.model._expressionName;
+                let nextIndex = (expressions.indexOf(current) + 1) % expressions.length;
+                oml2d.models.model.expression(expressions[nextIndex]);
+                oml2d.tipsMessage('表情: ' + expressions[nextIndex], 2000);
+              }
+            }
+          ];
+        }
