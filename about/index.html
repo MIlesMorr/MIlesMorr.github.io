@@ -37,8 +37,8 @@
 <meta property="og:description" content="调试 我是男的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/banner.webp">
-<meta property="article:published_time" content="2026-08-02T05:19:01.806Z">
-<meta property="article:modified_time" content="2026-08-02T05:19:01.806Z">
+<meta property="article:published_time" content="2026-08-02T05:43:01.356Z">
+<meta property="article:modified_time" content="2026-08-02T05:43:01.356Z">
 <meta property="article:author" content="MilesMorr">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/banner.webp">
@@ -282,7 +282,7 @@
     <div class="article-meta">
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2026-08-02T05:19:01.806Z" itemprop="datePublished">2026-08-02</time>
+    <time datetime="2026-08-02T05:43:01.356Z" itemprop="datePublished">2026-08-02</time>
     <time style="display: none;" id="post-update-time">2026-08-02</time>
   </span>
 </div>
@@ -518,8 +518,8 @@
           excerpt: "",
           description: "",
           stripContent: "调试 我是男的",
-          date: "Sun Aug 02 2026 05:19:01 GMT+0000",
-          updated: "Sun Aug 02 2026 05:19:01 GMT+0000",
+          date: "Sun Aug 02 2026 05:43:01 GMT+0000",
+          updated: "Sun Aug 02 2026 05:43:01 GMT+0000",
           cover: "/image/yy2.webp",
         };
       </script>
@@ -798,45 +798,5 @@
 
 
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.2/pixi.min.js"></script>
-<script src="https://unpkg.com/pixi-live2d-display@0.4.0/dist/pixi-live2d-display.min.js"></script>
-<script>
-  (function() {
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-      initLive2d();
-    } else {
-      document.addEventListener('DOMContentLoaded', initLive2d);
-    }
-    function initLive2d() {
-      const canvas = document.createElement('canvas');
-      canvas.id = 'live2d-canvas';
-      canvas.style.position = 'fixed';
-      canvas.style.bottom = '0';
-      canvas.style.right = '0';
-      canvas.style.width = '300px';
-      canvas.style.height = '600px';
-      canvas.style.zIndex = '9999';
-      canvas.style.pointerEvents = 'none';
-      document.body.appendChild(canvas);
-      const app = new PIXI.Application({
-        view: canvas,
-        width: 300,
-        height: 600,
-        backgroundAlpha: 0,
-        transparent: true
-      });
-      PIXI.live2d.Live2DModel.from('/live2d/yang/秧秧.model3.json')
-        .then(model => {
-          app.stage.addChild(model);
-          model.anchor.set(0.5, 1);
-          model.scale.set(0.18);
-          model.x = 150;
-          model.y = 600;
-        })
-        .catch(err => console.error('秧秧加载失败:', err));
-    }
-  })();
-</script>
-
-  </body>
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d/yang/yang.model3.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
   </html>
