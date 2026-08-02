@@ -255,23 +255,7 @@
 
 
 <!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"left",mobileDisplay:false,models:[{"path":"/live2d_models/yang/yang.model3.json","scale":0.15,"position":[-80,50],"stageStyle":{"width":280,"height":350}}],menus:{items:(defaultItems) => {
-  // 过滤掉不需要的默认按钮（例如删除 'rest'）
-  const filtered = defaultItems.filter(item => item.id !== 'rest');
-  return [
-    ...filtered,
-    {
-      id: 'SwitchExpression',
-      icon: 'emoji-joy',
-      title: '切换表情',
-      onClick: (oml2d) => {
-        const expressions = ['悲', '脸黑', '眼泪', '反绑x'];
-        const current = oml2d.models.model._expressionName;
-        let nextIndex = (expressions.indexOf(current) + 1) % expressions.length;
-        oml2d.models.model.expression(expressions[nextIndex]);
-        oml2d.tipsMessage('表情: ' + expressions[nextIndex], 2000);
-      }
-    }
-  ];
+return [];
 }
 }});</script><!-- hexo injector body_end end --></body>
 </html>
