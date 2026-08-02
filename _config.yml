@@ -107,17 +107,23 @@ deploy:
   type: ''
   
 
+# Live2D 看板娘配置
+# 文档：https://github.com/EYHN/hexo-helper-live2d
 live2d:
   enable: true
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/
-  pluginModelPath: live2d/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
   model:
-    use: yang/model.json
+    use: live2d-widget-model-hijiki  # 这里填你安装的模型包名
   display:
-    position: right
-    width: 150
-    height: 300
+    position: right  # 位置：left 或 right
+    width: 150       # 宽度
+    height: 300      # 高度
   mobile:
-    show: true
+    show: false      # 移动端是否显示（建议 false，避免遮挡内容）
+  react:
+    opacity: 0.7     # 透明度

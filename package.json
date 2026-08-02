@@ -23,6 +23,7 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-theme-reimu": "^1.12.5"
+    "hexo-theme-reimu": "^1.12.5",
+    "live2d-widget-model-hijiki": "^1.0.5"
   }
 }
