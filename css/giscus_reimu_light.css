@@ -95,9 +95,9 @@ main {
 /* Extensions from @primer/css/alerts/flash.scss */
   --color-social-reaction-bg-hover: var(--color-scale-gray-1);
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
-  --cursor-default: url("../images/cursor/reimu-cursor-default.png"), auto;
-  --cursor-pointer: url("../images/cursor/reimu-cursor-pointer.png"), pointer;
-  --cursor-text: url("../images/cursor/reimu-cursor-text.png"), text;
+  --cursor-default: url("../images/cursor/normal.png"), auto;
+  --cursor-pointer: url("../images/cursor/point.png"), pointer;
+  --cursor-text: url("../images/cursor/text.png"), text;
 }
 /* Extensions from @primer/css/alerts/flash.scss */
 main .pagination-loader-container {
