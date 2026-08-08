@@ -130,39 +130,15 @@ OhMyLive2d:
             ...filtered,
             {
               id: 'SwitchExpression',
-          icon: 'emoji-joy',
-          title: '切换表情',
-          onClick: (oml2d) => {
-            const expressions = ['悲', '脸黑', '眼泪', '反绑x'];
-            const current = oml2d.models.model._expressionName;
-            let nextIndex = (expressions.indexOf(current) + 1) % expressions.length;
-            oml2d.models.model.expression(expressions[nextIndex]);
-            oml2d.tipsMessage('表情: ' + expressions[nextIndex], 2000);
-          }
-        },
-        // ========== 👇 新增飞机游戏菜单项 ==========
-        {
-          id: 'AsteroidsGame',
-          icon: 'fa-paper-plane',    // 飞机图标（Font Awesome）
-          title: '飞机大战',
-          onClick: (oml2d) => {
-            // 检查游戏是否已加载
-            if (typeof Asteroids === 'undefined') {
-              var script = document.createElement('script');
-              script.src = 'https://cdn.jsdelivr.net/gh/GalaxyMimi/CDN/asteroids.js';
-              document.head.appendChild(script);
-              script.onload = function() {
-                if (typeof Asteroids !== 'undefined' && window.ASTEROIDSPLAYERS) {
-                  window.ASTEROIDSPLAYERS.push(new Asteroids());
-                }
-              };
-            } else {
-              if (window.ASTEROIDSPLAYERS) {
-                window.ASTEROIDSPLAYERS.push(new Asteroids());
+              icon: 'emoji-joy',
+              title: '切换表情',
+              onClick: (oml2d) => {
+                const expressions = ['悲', '脸黑', '眼泪', '反绑x'];
+                const current = oml2d.models.model._expressionName;
+                let nextIndex = (expressions.indexOf(current) + 1) % expressions.length;
+                oml2d.models.model.expression(expressions[nextIndex]);
+                oml2d.tipsMessage('表情: ' + expressions[nextIndex], 2000);
               }
             }
-          }
+          ];
         }
-        // ========== 👆 新增结束 ==========
-      ];
-    }
