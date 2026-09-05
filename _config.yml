@@ -115,7 +115,7 @@ OhMyLive2d:
     dockedPosition: 'left'
     mobileDisplay: false
     models:
-      - path: https:MllesMorr/MllesMorr.github.io/source/live2d_models/yang/yang.model3.json
+      - path: https://milesmorr.github.io/live2d_models/yang/yang.model3.json
         scale: 0.08
         position: [-80, 50]
         stageStyle:
