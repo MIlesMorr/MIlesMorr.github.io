@@ -1,1 +1,5 @@
 <%- partial('_partial/article', {post: page}) %>
+
+<% if (page.comment === 'echo') { %>
+  <%- partial('_partial/echothread') %>
+<% }  %>
