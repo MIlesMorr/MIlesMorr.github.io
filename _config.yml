@@ -142,3 +142,11 @@ OhMyLive2d:
             }
           ];
         }
+        
+        
+hide_posts:
+  enable: true
+  filter: hidden          # 用于标记隐藏页面的字段名，默认是 'hidden'[reference:10]
+  noindex: true           # 建议开启，告诉搜索引擎不要索引此页面[reference:11]
+  # allowlist_generators: [] # 高级选项：白名单，让隐藏页面在特定列表中出现[reference:12]
+  # blocklist_generators: ['*'] # 高级选项：黑名单[reference:13]
