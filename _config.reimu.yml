@@ -698,24 +698,36 @@ live2d_widgets:
 
 # Please turn on pjax to use this feature
 player:
-  disable_on_mobile: false
+  disable_on_mobile: true
   position: before_sidebar # before_sidebar / after_sidebar / after_widget
   # if you enable meting, you must enable aplayer first
   aplayer:
     # https://github.com/DIYgod/APlayer
-    enable: false
+    enable: true
     options:
-      audio: []
-      fixed:
-      autoplay:
-      loop:
-      order:
-      preload:
-      volume:
-      mutex:
-      listFolded:
-      lrcType:
-  meting:
+      audio: 
+        - name: "Alexander Hamilton"
+          artist: "Alexander Hamilton"
+          url: "https://milesmorr.github.io/music/Alexander Hamilton/Alexander Hamilton.mp3"
+          cover: "https://milesmorr.github.io/music/Alexander Hamilton/Alexander Hamilton.webp"
+        - name: "Bonjour Au revoir"
+          artist: "Joyce Jonathan"
+          url: "https://milesmorr.github.io/music/Bonjour Au revoir/Bonjour Au revoir.mp3"
+          cover: "https://milesmorr.github.io/music/Bonjour Au revoir/Bonjour Au revoir.webp"
+        - name: ""
+          artist: ""
+          url: "https://milesmorr.github.io/music/Equestria Girls (Cafeteria Song)/Equestria Girls (Cafeteria Song).webp"
+          cover: "https://milesmorr.github.io/music/Equestria Girls (Cafeteria Song)/Equestria Girls (Cafeteria Song).webp"
+      fixed: false
+      autoplay: false
+      loop: "all"
+      order: "list"
+      preload: "auto"
+      volume: 0.7
+      mutex: true
+      listFolded: false
+      lrcType: 3
+  meting: 
     # https://github.com/metowolf/MetingJS
     # if you want to use meting, please enable aplayer first
     enable: false
