@@ -37,7 +37,7 @@
 <meta property="og:description" content="起源在几何光学中，有费马定理，即光线的轨迹方程满足$$\delta \int nds &#x3D; 0$$在这里我们并不介绍怎么具体地计算变分式，因为注意力惊人的我们注意到拉格朗日方程的变分形式$$\delta \int Ldt &#x3D; 0$$与费马定理惊人得相似 首先，我们事先固定拉格朗日物体运动的起始点与结束点，那么$L &#x3D; \frac{1}{2} m v^2 - V$的势能变">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-09-05T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-09-06T05:35:32.771Z">
+<meta property="article:modified_time" content="2026-09-12T13:04:02.822Z">
 <meta property="article:author" content="MilesMorr">
 <meta property="article:tag" content="物理">
 <meta name="twitter:card" content="summary">
@@ -53,6 +53,7 @@
     
 <link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
 
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU/voDBY5XE2lVh" crossorigin="anonymous">
 <meta name="generator" content="Hexo 8.1.2"></head>
 
   <body>
@@ -206,6 +207,7 @@
         <div id="content" aria-label="Page content"  class="sidebar-right" >
           <aside id="sidebar" aria-label="Sidebar">
   <div class="sidebar-wrapper-container sticky">
+      <div id="aplayer" theme="var(--color-link)" data-aos="fade-up"></div>
   <div class="sidebar-wrapper">
     <div class="sidebar-wrap" data-aos="fade-up">
           <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
@@ -289,7 +291,7 @@
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
     <time datetime="2026-09-05T00:00:00.000Z" itemprop="datePublished">2026-09-05</time>
-    <time style="display: none;" id="post-update-time">2026-09-06</time>
+    <time style="display: none;" id="post-update-time">2026-09-12</time>
   </span>
 </div>
 
@@ -552,7 +554,7 @@
           description: "",
           stripContent: "起源在几何光学中，有费马定理，即光线的轨迹方程满足$$\delta \int nds &amp;#x3D; 0$$在这里我们并不介绍怎么具体地计算变分式，因为注意力惊人的我们注意到拉格朗日方程的变分形式$$\delta \int Ldt &amp;#x3D; 0$$与费马定理惊人得相似 首先，我们事先固定拉格朗日物体运动的起始点与结束点，那么$L &amp;#x3D; \frac{1}{2} m v^2 - V$的势能变分始终为零（如果不理解没有关系，不影响后面，可以当作结论记住）$$\delta \int \frac",
           date: "Sat Sep 05 2026 00:00:00 GMT+0000",
-          updated: "Sun Sep 06 2026 05:35:32 GMT+0000",
+          updated: "Sat Sep 12 2026 13:04:02 GMT+0000",
           cover: "/image/yy4.webp",
         };
       </script>
@@ -828,6 +830,41 @@
     <script data-pjax>
       window.MathJax = {"tex":{"tags":"ams","useLabelIds":true,"inlineMath":[["$","$"],["\\\\(","\\\\)"]],"displayMath":[["$$","$$"],["\\\\[","\\\\]"]],"processEscapes":true,"processEnvironments":true,"autoload":{"color":[],"colorv2":["color"]},"packages":{"[+]":["noerrors"]}},"options":{"skipHtmlTags":["script","noscript","style","textarea","pre","code"],"ignoreHtmlClass":"tex2jax_ignore","processHtmlClass":"tex2jax_process"},"loader":{"load":["input/asciimath","[tex]/noerrors"]}};
     </script>
+
+    <script>
+    var setupAPlayer = () => {
+      if (!true || !window.matchMedia('(max-width: 768px)').matches) {
+        const isMobile = window.matchMedia('(max-width: 959px)').matches;
+        if (isMobile) {
+          const aplayer = _$('#aplayer');
+          if (aplayer) {
+            const aside = aplayer.parentNode?.parentNode;
+            if (aside?.tagName === 'ASIDE') {
+              aplayer.removeAttribute('data-aos');
+              aplayer.parentNode.removeChild(aplayer);
+              document.body.appendChild(aplayer);
+            }
+          }
+        }
+        new APlayer({
+          theme: "var(--color-link)",
+          container: document.getElementById('aplayer'),
+          audio: [{"name":"Alexander Hamilton","artist":"Alexander Hamilton","url":"https://milesmorr.github.io/music/Alexander Hamilton/Alexander Hamilton.mp3","cover":"https://milesmorr.github.io/music/Alexander Hamilton/Alexander Hamilton.webp"},{"name":"Bonjour Au revoir","artist":"Joyce Jonathan","url":"https://milesmorr.github.io/music/Bonjour Au revoir/Bonjour Au revoir.mp3","cover":"https://milesmorr.github.io/music/Bonjour Au revoir/Bonjour Au revoir.webp"},{"name":"","artist":"","url":"https://milesmorr.github.io/music/Equestria Girls (Cafeteria Song)/Equestria Girls (Cafeteria Song).webp","cover":"https://milesmorr.github.io/music/Equestria Girls (Cafeteria Song)/Equestria Girls (Cafeteria Song).webp"}] || [],
+          fixed: isMobile ? true : (false || false),
+          autoplay: false || false,
+          loop: 'all' || 'all',
+          order: 'list' || 'list',
+          preload: 'auto' || 'auto',
+          volume: 0.7 || 0.7,
+          mutex: true || true,
+          listFolded: false || false,
+          lrcType: 3 || 0,
+        });
+      }
+    }
+    </script>
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous" defer onload="setupAPlayer()"></script>
 
 
 
