@@ -25,7 +25,7 @@ menu:
 
 subtitle:
   typing:
-    enable: true
+    enable: false
     strings:
       - "嗯，我就在你身旁。"
       - "好久不见，漂泊者。"
