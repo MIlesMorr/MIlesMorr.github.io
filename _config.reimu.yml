@@ -25,7 +25,7 @@ menu:
 
 subtitle:
   typing:
-    enable: false
+    enable: true
     strings:
       - "嗯，我就在你身旁。"
       - "好久不见，漂泊者。"
@@ -41,7 +41,7 @@ subtitle:
     backDelay: 2000             # time before backspacing (milliseconds)
     startDelay: 300             # time before typing starts (milliseconds)
     loop: true                  # loop through the strings
-    shuffle: true               # randomize the order of strings
+    shuffle: false               # randomize the order of strings
     showCursor: true            # show the typing cursor
     cursorChar: "_"             # character for cursor
     smartBackspace: false       # only backspace what doesn't match the previous string
