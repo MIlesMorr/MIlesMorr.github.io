@@ -197,7 +197,7 @@
             <h1 data-aos="slide-up">玄翎流息｜Mystic Plume Whisper</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
-              <span id="subtitle">迎着风的方向</span>
+              <span id="subtitle"><span></span></span>
         </h2>
     </div>
   </div>
@@ -532,6 +532,48 @@
 
 <div id="lazy-script">
   <div>
+      
+<script src="https://npm.webcache.cn/typed.js@2.1.0/dist/typed.umd.js" integrity="sha384-cMrTlShXEGSdSFA359p+3aVUxK&#x2F;R+0TAfbRZMcTlAn8yqzxEDj05QsS65nTFMMj4" crossorigin="anonymous" defer onload="initSubtitleTyping()"></script>
+
+      <script data-pjax>
+        window.subtitleTypingConfig = {
+          strings: ["我是子标题","我也是子标题","我和他们一样","我们都是子标题","嗯，我就在你身旁。","好久不见，漂泊者。","万事万物，凡是暴露在流息中的，我都能有所感知。","所以遇到什么不对劲的，不要自己硬扛，第一时间告诉我，好吗？","一起抵达更远的地方吧。云雀的歌，即将唱响。","我会尽我所能，成为大家的慰藉。","流息越发强烈，它……想告诉我什么呢？","谢谢你，漂泊者。谢谢你……为我所做的一切。","越过风雨，向美好献上颂歌…此时此刻，是云雀离天空最近的时候。"],
+          typeSpeed: 100,
+          backSpeed: 50,
+          backDelay: 2000,
+          startDelay: 300,
+          loop: true,
+          shuffle: false,
+          showCursor: true || true,
+          cursorChar: "_",
+          smartBackspace: false || false,
+        };
+
+        function initSubtitleTyping() {
+          const subtitleElement = document.querySelector('#subtitle');
+          if (!subtitleElement || !window.Typed || !window.subtitleTypingConfig) {
+            return;
+          }
+
+          if (window.__typedInstance) {
+            window.__typedInstance.destroy();
+          }
+
+          window.__typedInstance = new Typed('#subtitle span', window.subtitleTypingConfig);
+        }
+        
+        if (!window.__typedInitialized) {
+          window.__typedInitialized = true;
+          
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSubtitleTyping);
+          } else {
+            initSubtitleTyping();
+          }
+        } else {
+          initSubtitleTyping();
+        }
+      </script>
   </div>
 </div>
 
